@@ -8,15 +8,20 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="root"></div>
+    <div id="root"><h1>Hello World</h1></div>
 
     <script type="text/babel">
         class App extends React.Component {
+            state = {
+                name: "Mohamed",
+                age: 26,
+                isOpend: true
+            }
 
             render() {
                 return (
                     <div>
-                        <h1>Hello World</h1>
+                        <h1>Hello my name is { this.state.name } and I have {this.state.age} years old</h1>
                     </div>
                     
                 )
