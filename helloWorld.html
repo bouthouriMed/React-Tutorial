@@ -18,10 +18,25 @@
                 isOpend: true
             }
 
+            handleClick(e) {
+                console.log(this.state.name)
+            }
+
+            handleMouseOver(e) {
+                console.log(e.target, e.pageX)
+            }
+
+            handleCopy() {
+                console.log("copied")
+            }
+
             render() {
                 return (
                     <div>
                         <h1>Hello my name is { this.state.name } and I have {this.state.age} years old</h1>
+                        <button onClick={this.handleClick} >Click me</button>
+                        <button onMouseOver={this.handleMouseOver} >Hover me</button>
+                        <p onCopy={this.handleCopy} > copy me </p>
                     </div>
                     
                 )
