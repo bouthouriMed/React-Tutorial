@@ -12,14 +12,18 @@
 
     <script type="text/babel">
         class App extends React.Component {
+            
             state = {
                 name: "Mohamed",
                 age: 26,
                 isOpend: true
             }
 
-            handleClick(e) {
-                console.log(this.state.name)
+            handleClick = (e) => {
+                this.setState({
+                   name: "Ahmed",
+                   age: 30
+                })
             }
 
             handleMouseOver(e) {
